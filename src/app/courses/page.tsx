@@ -6,7 +6,9 @@ export default function Courses() {
       duration: "6 weeks",
       level: "Beginner",
       topics: ["AI Basics", "Machine Learning", "Data Analytics", "Implementation Strategies"],
-      status: "Enrolling Now"
+      status: "Enrolling Now",
+      link: "/courses/generative-ai",
+      externalLink: "https://www.coursera.org/learn/generative-ai-for-everyone"
     },
     {
       title: "Advanced Retail Analytics",
@@ -76,9 +78,28 @@ export default function Courses() {
                   </div>
 
                   <div className="mt-8">
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                      Learn More
-                    </button>
+                    {course.link ? (
+                      <div className="space-x-4">
+                        <a
+                          href={course.link}
+                          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-block"
+                        >
+                          Learn More
+                        </a>
+                        <a
+                          href={course.externalLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors inline-block border border-blue-600"
+                        >
+                          Enroll Now
+                        </a>
+                      </div>
+                    ) : (
+                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Learn More
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
