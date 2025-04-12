@@ -118,7 +118,7 @@ export default function GenerativeAICourse() {
       {/* What You'll Learn */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8">What You'll Learn</h2>
+          <h2 className="text-3xl font-bold mb-8">What You&apos;ll Learn</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {courseDetails.whatYoullLearn.map((item, index) => (
               <div key={index} className="flex items-start space-x-3">
